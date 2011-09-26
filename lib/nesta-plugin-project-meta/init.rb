@@ -1,3 +1,5 @@
+require 'api_cache'
+
 module Nesta
   # module Plugin
   #   module ProjectMeta
