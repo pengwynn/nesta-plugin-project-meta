@@ -4,7 +4,7 @@ require "nesta-plugin-project-meta/version"
 
 Gem::Specification.new do |s|
   s.name        = "nesta-plugin-project-meta"
-  s.version     = Nesta::Plugin::Project::Meta::VERSION
+  s.version     = Nesta::Plugin::ProjectMeta::VERSION
   s.authors     = ["Wynn Netherland"]
   s.email       = ["wynn.netherland@gmail.com"]
   s.homepage    = "https://github.com/pengwynn/nesta-plugin-project-meta"

@@ -1,20 +1,15 @@
-require 'api_cache'
-require 'octokit'
-require 'gems'
-require 'hashie'
-
 module Nesta
-  module Plugin
-    module Project::Meta
-      module Helpers
-        # If your plugin needs any helper methods, add them here...
-      end
-    end
-  end
+  # module Plugin
+  #   module ProjectMeta
+  #     module Helpers
+  #       # If your plugin needs any helper methods, add them here...
+  #     end
+  #   end
+  # end
 
-  class App
-    helpers Nesta::Plugin::Project::Meta::Helpers
-  end
+  # class App
+  #   helpers Nesta::Plugin::ProjectMeta::Helpers
+  # end
 
   class Page
     def github_meta
