@@ -1,3 +1,8 @@
+require 'api_cache'
+require 'octokit'
+require 'gems'
+require 'hashie'
+
 module Nesta
   module Plugin
     module Project::Meta
