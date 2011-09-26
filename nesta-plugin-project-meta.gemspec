@@ -21,6 +21,7 @@ Gem::Specification.new do |s|
   s.add_dependency("octokit", "~> 0.6.2")
   s.add_dependency("gems", "~> 0.5.0")
   s.add_dependency("hashie", "~> 1.0.0")
+  s.add_dependency("api_cache", "~> 0.2.3")
 
   s.add_development_dependency("rake")
 end
