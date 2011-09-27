@@ -21,7 +21,7 @@ module Nesta
       github_repo = self.metadata('github_repo')
       return nil if github_repo.nil?
 
-      APICache.get("github-#{github_repo}") do
+      APICache.get("github-#{github_repo}", :fail => nil) do
         Octokit.repo(github_repo)
       end
     end
@@ -31,7 +31,7 @@ module Nesta
       return nil if gem_name.nil?
 
 
-      APICache.get("gem-#{gem_name}") do
+      APICache.get("gem-#{gem_name}", :fail => nil) do
         Hashie::Mash.new(Gems.info(gem_name))
       end
     end
