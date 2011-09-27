@@ -4,17 +4,29 @@ require 'gems'
 require 'hashie'
 
 module Nesta
-  # module Plugin
-  #   module ProjectMeta
-  #     module Helpers
-  #       # If your plugin needs any helper methods, add them here...
-  #     end
-  #   end
-  # end
+  module Plugin
+    module ProjectMeta
+      module Helpers
+        def link_to_github_watchers(page)
+          if page.github_meta
+            watchers_url = page.github_meta.url + "/watchers"
+            %Q{<a href="#{watchers_url}">#{page.github_meta.watchers}</a>}
+          end
+        end
 
-  # class App
-  #   helpers Nesta::Plugin::ProjectMeta::Helpers
-  # end
+        def link_to_github_forks(page)
+          if page.github_meta
+            forks_url = page.github_meta.url + "/network"
+            %Q{<a href="#{forks_url}">#{page.github_meta.forks}</a>}
+          end
+        end
+      end
+    end
+  end
+
+  class App
+    helpers Nesta::Plugin::ProjectMeta::Helpers
+  end
 
   class Page
     def github_meta
