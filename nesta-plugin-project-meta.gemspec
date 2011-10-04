@@ -19,7 +19,6 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.add_dependency("nesta", ">= 0.9.11")
   s.add_dependency("octokit", "~> 0.6.2")
-  s.add_dependency("gems", "~> 0.5.0")
   s.add_dependency("hashie", "~> 1.0.0")
   s.add_dependency("api_cache", "~> 0.2.3")
 

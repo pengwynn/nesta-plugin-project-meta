@@ -1,6 +1,5 @@
 require 'api_cache'
 require 'octokit'
-require 'gems'
 require 'hashie'
 
 module Nesta
@@ -12,15 +11,6 @@ module Nesta
 
         APICache.get("github-#{github_repo}", :fail => nil) do
           Octokit.repo(github_repo)
-        end
-      end
-
-      def self.rubygems_meta(page)
-        gem_name = page.metadata('gem')
-        return nil if gem_name.nil?
-
-        APICache.get("gem-#{gem_name}", :fail => nil) do
-          Hashie::Mash.new(Gems.info(gem_name))
         end
       end
 
